@@ -17,10 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/archives/', function () {
-    return '記事一覧';
+    return view('archives.index');
 });
 Route::get('/archives/{category}/', function ($category) {
-    return $category . 'の記事一覧';
+    return view('archives.category',['category'=>$category]);
 });
 Route::post('/join/', function () {
     return '入会申込完了';
